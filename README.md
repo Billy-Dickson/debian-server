@@ -55,9 +55,9 @@ Select the following when running through the startup wizard.
 | **Storage:** | (Select your storage pool) |
 | **Disk Size (GiB):** | 32 (This is up to you) |
 | **Format:** | QEMU image format (qcow2) |
-| **Cache:** | default (No Cache) |
+| **Cache:** | Default (No Cache) |
 | **Discard:** | Default unticked |
-| **IO Thread:** | Default ticked |
+| **IO thread:** | Default ticked |
 | **Backup:** | Default ticked (This is up to you) |
 
 ![Virtual Disk Setup](/assets/Disks.png)
