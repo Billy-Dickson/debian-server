@@ -23,17 +23,17 @@ Select the following when running through the startup wizard.
 
 | **OS** | |
 |--|--|
-|  **Use CD/DVD disc image file (iso)**| |
+| **Use CD/DVD disc image file (iso)**| |
 | **Storage:** | (where you saved your ISO)|
-|**ISO Image:** |debian-12.1.0-amd64-netinst.iso|  
-|**Guest OS**|
-|**Type:**|    Linux |
-|**Version:**| 6.x - 2.6 Kernel |
+| **ISO Image:** |debian-12.1.0-amd64-netinst.iso|  
+| **Guest OS**|
+| **Type:**|    Linux |
+| **Version:**| 6.x - 2.6 Kernel |
 
 ![OS](/assets/OS.png)
 
 | **System** | |
-|-|-|
+|--|--|
 | **Graphics Card:** |Default |
 | **Machine:** |     q35  |
 | **BIOS:**   |     OVMF (UEFI)  |
@@ -49,7 +49,7 @@ Select the following when running through the startup wizard.
 ![System](/assets/System.png)
 
 | **Disks** | |
-|-|-|
+|--|--|
 | **Bus Device:** | Default |
 | **SCSI Controller:** | VirtIO SCSI Single |
 | **Storage:** | (Select your storage pool) |
@@ -62,8 +62,8 @@ Select the following when running through the startup wizard.
 
 ![Virtual Disk Setup](/assets/Disks.png)
 
-|**CPU**| |
-|-|-|
+| **CPU**| |
+|--|--|
 | **Socket:** | 1 |
 | **Cores:** | 2 |
 | **Type:** | x86-64-v2-AES |
@@ -71,19 +71,25 @@ Select the following when running through the startup wizard.
 ![CPU Type](/assets/CPU.png)
 
 | **Memory** | |
-|-|-|
+|--|--|
 | **Memory (MiB):** | 2048 (Workload Dependent) |
 | **Minimum memory (MB)** | 2048 |
 | **Balloning** | Default ticked (If a mimumum is specified, them the allocation will vary between minimum and maximum when required)|
 
 ![Memory Allocation](/assets/Memory.png)
 
-### Network
+| **Network** | |
+|--|--|
+| **Bridge:** | vrbr1 (Yours may be different) |
+| **VLAN Tag:** | Default no VLANS |
+| **Firewall:** | Default tick |
+| **Model:** | VirtIO (paravirtualized) |
+| **MAC Address:** | auto |
 
-**Bridge:** vrbr1 (Yours may be different)  
-**VLAN Tag:** (no VLANS)  
-**Firewall:** tick  
-**Model:** VirtIO (paravirtualized)  
-**MAC Address:** auto
+![Network Settings](/assets/Memory.png)
+
+**Confirm**
+
+![Confirm](/assets/Confirm.png)
 
 ## References
