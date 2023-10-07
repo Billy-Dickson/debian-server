@@ -12,60 +12,75 @@
 
 Select the following when running through the startup wizard.  
 
-### General
-|  |  |  
+| **General**  |  |  
 |--|--|
 | **Node:**  | (Whatever that happens to be)  |
 | **VM ID:** | (Pick your number) |
 | **Machine:** | Debian-Server  |
+| **Start at boot** | Dependent on your needs |
 
-### OS
+![General Settings](/assets/General.png)
 
-**Use CD/DVD disc image file (iso)**  
-**Storage:** (where you saved your ISO)  
-**ISO Image:** debian-12.1.0-amd64-netinst.iso  
-**Guest OS**
-**Type:**     Linux  
-**Version:**  6.x - 2.6 Kernel  
+| **OS** | |
+|--|--|
+|  **Use CD/DVD disc image file (iso)**| |
+| **Storage:** | (where you saved your ISO)|
+|**ISO Image:** |debian-12.1.0-amd64-netinst.iso|  
+|**Guest OS**|
+|**Type:**|    Linux |
+|**Version:**| 6.x - 2.6 Kernel |
 
-### System
+![OS](/assets/OS.png)
 
-**Graphics Card:** Default  
-**Machine:**       q35  
-**BIOS:**        OVMF (UEFI)  
-**Add EFI Disk:** tick  
-**EFI Storage:**        Select your storage pool  
-**SCSI Controller:**    VirtIO SCSI single  
-**Qemu Agent:**       tick  
-**Pre-Enroll Keys:** tick  
-**SCSI Controller:** VirtIO SCSI Single  
-**Qemu Agent:** tick  
-**Add TMP** unticked
+| **System** | |
+|-|-|
+| **Graphics Card:** |Default |
+| **Machine:** |     q35  |
+| **BIOS:**   |     OVMF (UEFI)  |
+| **Add EFI Disk:** | tick |
+| **EFI Storage:**  | Select your storage pool |
+| **SCSI Controller:** | VirtIO SCSI single |
+| **Qemu Agent:** | tick |
+| **Pre-Enroll Keys:** | tick |
+| **SCSI Controller:** | VirtIO SCSI Single |
+| **Qemu Agent:** | tick |
+| **Add TMP** | unticked |
 
-### Disks
+![System](/assets/System.png)
 
-**Bus Device:** Default  
-**SCSI Controller:** VirtIO SCSI Single  
-**Storage:** (Select your storage pool)  
-**Disk Size (GiB):** 32 (This is up to you)  
-**Format:** QEMU image format (qcow2)  
-**Cache:** Default (No Cache)  
-**Discard:** default  (Default)  
-**IO Thread:** tick (Default)  
+| **Disks** | |
+|-|-|
+| **Bus Device:** | Default |
+| **SCSI Controller:** | VirtIO SCSI Single |
+| **Storage:** | (Select your storage pool) |
+| **Disk Size (GiB):** | 32 (This is up to you) |
+| **Format:** | QEMU image format (qcow2) |
+| **Cache:** | default (No Cache) |
+| **Discard:** | Default unticked |
+| **IO Thread:** | Default ticked |
+| **Backup:** | Default ticked (This is up to you) |
 
-### CPU
+![Virtual Disk Setup](/assets/Disks.png)
 
-Socket:     1  
-Cores:      2  
-Type:       x86-64-v2-AES
+|**CPU**| |
+|-|-|
+| **Socket:** | 1 |
+| **Cores:** | 2 |
+| **Type:** | x86-64-v2-AES |
 
-### Memory
+![CPU Type](/assets/CPU.png)
 
-**Memory (MiB):**    2048 (Workload Dependent)
+| **Memory** | |
+|-|-|
+| **Memory (MiB):** | 2048 (Workload Dependent) |
+| **Minimum memory (MB)** | 2048 |
+| **Balloning** | Default ticked (If a mimumum is specified, them the allocation will vary between minimum and maximum when required)|
+
+![Memory Allocation](/assets/Memory.png)
 
 ### Network
 
-**Bridge:** vrbr1 (yours may be different)  
+**Bridge:** vrbr1 (Yours may be different)  
 **VLAN Tag:** (no VLANS)  
 **Firewall:** tick  
 **Model:** VirtIO (paravirtualized)  
