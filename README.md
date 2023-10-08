@@ -87,7 +87,6 @@ Select the following when running through the startup wizard.
 | **MAC Address:** | auto |
 
 ![Network Settings](/assets/Memory.png)
-
 **Confirm**
 
 ![Confirm](/assets/Confirm.png)
@@ -96,4 +95,4 @@ Run through the installation until you get to this screen.
 
 ## References
 
-- Linode - [Automating Security Updated](https://www.linode.com/docs/guides/how-to-configure-automated-security-updates-debian/)
+- Akamai - [Automating Security Updated](https://www.linode.com/docs/guides/how-to-configure-automated-security-updates-debian/)
