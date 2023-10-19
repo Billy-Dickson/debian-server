@@ -97,7 +97,7 @@ Run through the installation until you get to this screen. Just press the contin
 
 With regards to server installations, these are the ones that I would normally choose.
 
-![](/assets/Installed_Applications.png)
+![Pick applications](/assets/Installed_Applications.png)
 
 ## References
 
