@@ -86,7 +86,7 @@ Select the following when running through the startup wizard.
 | **Model:** | VirtIO (paravirtualized) |
 | **MAC Address:** | auto |
 
-![Network Settings](/assets/Memory.png)
+![Network Settings](/assets/Memory.png)  
 **Confirm**
 
 ![Confirm](/assets/Confirm.png)
