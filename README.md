@@ -50,7 +50,7 @@ Select the following when running through the startup wizard.
 
 | **Disks** | |
 |--|--|
-| **Bus Device:** | Default |
+| **Bus/Device:** | SCSI |
 | **SCSI Controller:** | VirtIO SCSI Single |
 | **Storage:** | (Select your storage pool) |
 | **Disk Size (GiB):** | 32 (This is up to you) |
@@ -91,7 +91,13 @@ Select the following when running through the startup wizard.
 
 ![Confirm](/assets/Confirm.png)
 
-Run through the installation until you get to this screen.
+Run through the installation until you get to this screen. Just press the continue button and continue, this will install the sudo package and add next account to that group.
+
+![Root Loing](/assets/Root_Password.png)
+
+With regards to server installations, these are the ones that I would normally choose.
+
+![](/assets/Installed_Applications.png)
 
 ## References
 
