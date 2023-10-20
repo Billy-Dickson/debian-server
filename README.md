@@ -103,6 +103,10 @@ With regards to server installations, these are the ones that I would normally c
 
 The purpose of unattended-upgrades is to keep the computer current with the latest security (and other) updates automatically. If you plan to use it, you should have some means to monitor your systems, such as installing the apt-listchanges package and configuring it to send you emails about updates.
 
+## Install and setup UFW firewall
+
+
+
 ## References
 
 - Akamai - [Automating Security Updated](https://www.linode.com/docs/guides/how-to-configure-automated-security-updates-debian/)
