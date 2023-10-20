@@ -1,6 +1,6 @@
 # Debian Server install on Proxmox
 
-## Prerequisites
+## Prerequisites (Work in progress 20/10/23)
 
 1. A running [Proxmox](https://www.proxmox.com/en/downloads) install, see my [Proxmox-Build](https://github.com/Billy-Dickson/proxmox-build)
 2. A downloaded debian net install from the debian site [here](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.1.0-amd64-netinst.iso).
@@ -93,12 +93,17 @@ Select the following when running through the startup wizard.
 
 Run through the installation until you get to this screen. Just press the continue button and continue, this will install the sudo package and add next account to that group.
 
-![Root Loing](/assets/Root_Password.png)
+![Root Password](/assets/Root_Password.png)
 
-With regards to server installations, these are the ones that I would normally choose.
+With regards to server installations, these are the ones that I would normally choose as a base installation.
 
 ![Pick applications](/assets/Installed_Applications.png)
+
+## Automatic Updates
+
+The purpose of unattended-upgrades is to keep the computer current with the latest security (and other) updates automatically. If you plan to use it, you should have some means to monitor your systems, such as installing the apt-listchanges package and configuring it to send you emails about updates.
 
 ## References
 
 - Akamai - [Automating Security Updated](https://www.linode.com/docs/guides/how-to-configure-automated-security-updates-debian/)
+- Debian Wiki - [Automatic Updates](https://wiki.debian.org/UnattendedUpgrades#:~:text=The%20purpose%20of%20unattended%2Dupgrades,send%20you%20emails%20about%20updates.)
