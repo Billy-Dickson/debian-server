@@ -215,11 +215,60 @@ The purpose of unattended-upgrades is to keep the computer current with the late
     Update-Package-Lists: 1 enables auto-update, 0 disables.  
     Unattended-Upgrade: 1 enables auto-upgrade, 0 disables.  
     AutocleanInterval: Enables auto clean packages for X days.  
-The above configuration displays 7 days
+    The above configuration displays 7 days
+
+7. Testing the Configuration  
+
+    You can perform a dry run to test the configuration. The dry run command runs a test update but no actual changes take place.
+
+    ```bash
+    sudo unattended-upgrades --dry-run --debug
+    ```
 
 ## Install and setup UFW firewall (Still to Document)
+
+1. Install UFW (Uncomplicated FireWall) on your Debian system.
+
+   ```bash
+   sudo apt install ufw
+   ```
+
+   ![Install UFW](/assets/Install_UFW.png)
+
+2. Enable IPv6 support in ufw
+
+   I don't use IPv6 at my work or in my homelab, but at some point I might, so I see no downside to enabling IPv6 just now. It will probably save me some troubleshooting issues further down the line. I think that this might be especially handy if I intend to use these instructions on a cloud Linux instance.
+
+   ```bash
+   sudo nano /etc/default/ufw
+   ```
+
+   ![Edit UFW IPv6](/assets/UFW_IPv6.png)
+
+   Ensure that IPv6 is enabled.
+
+   ![IPv6 enabled](/assets/UFW_Config.png)
+
+   Allow ssh prior to enabling the firewall (just in case it's in the cloud, you don't want to lock yourself out)
+
+   ```bash
+   sudo ufw allow ssh
+   ```
+
+   Start and enable ufw on boot.
+
+   ```bash
+   sudo ufw enable
+   ```
+
+   ```bash
+   sudo ufw status
+   ```
+
+![](/assets/Status.png)
 
 ## References
 
 - Akamai - [Automating Security Updated](https://www.linode.com/docs/guides/how-to-configure-automated-security-updates-debian/)
 - Debian Wiki - [Automatic Updates](https://wiki.debian.org/UnattendedUpgrades#:~:text=The%20purpose%20of%20unattended%2Dupgrades,send%20you%20emails%20about%20updates.)
+- Digital Ocean - How To Setup a Firewall with UFW on an [Ubuntu and Debian](https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server) Cloud Server
