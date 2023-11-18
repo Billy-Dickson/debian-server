@@ -265,7 +265,7 @@ The purpose of unattended-upgrades is to keep the computer current with the late
    sudo ufw status
    ```
 
-![](/assets/Status.png)
+![UFW Status](/assets/Status.png)
 
 ## References
 
