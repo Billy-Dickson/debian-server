@@ -267,7 +267,7 @@ The purpose of unattended-upgrades is to keep the computer current with the late
 
 ![UFW Status](/assets/Status.png)
 
-## Install Docker
+## Install Docker (Optional)
 
 1. Add Docker's official GPG key
 
