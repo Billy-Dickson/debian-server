@@ -225,7 +225,7 @@ The purpose of unattended-upgrades is to keep the computer current with the late
     sudo unattended-upgrades --dry-run --debug
     ```
 
-## Install and setup UFW firewall (Still to Document)
+## Install and setup UFW firewall
 
 1. Install UFW (Uncomplicated FireWall) on your Debian system.
 
@@ -267,8 +267,32 @@ The purpose of unattended-upgrades is to keep the computer current with the late
 
 ![UFW Status](/assets/Status.png)
 
+## Install Docker
+
+1. Add Docker's official GPG key
+
+```bash
+sudo apt-get update
+sudo apt-get install ca-certificates curl gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+```
+
+2. Add the repository to Apt sources
+
+```bash
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+```
+
 ## References
 
 - Akamai - [Automating Security Updated](https://www.linode.com/docs/guides/how-to-configure-automated-security-updates-debian/)
 - Debian Wiki - [Automatic Updates](https://wiki.debian.org/UnattendedUpgrades#:~:text=The%20purpose%20of%20unattended%2Dupgrades,send%20you%20emails%20about%20updates.)
 - Digital Ocean - How To Setup a Firewall with UFW on an [Ubuntu and Debian](https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server) Cloud Server
+- How to install UFW on [Debian 12](https://www.cyberciti.biz/faq/set-up-a-firewall-with-ufw-on-debian-12-linux/)
+- How to install docker on [Debian 12](https://docs.docker.com/engine/install/debian/)
