@@ -310,6 +310,3 @@ The purpose of unattended-upgrades is to keep the computer current with the late
 - Digital Ocean - How To Setup a Firewall with UFW on an [Ubuntu and Debian](https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server) Cloud Server
 - How to install UFW on [Debian 12](https://www.cyberciti.biz/faq/set-up-a-firewall-with-ufw-on-debian-12-linux/)
 - How to install docker on [Debian 12](https://docs.docker.com/engine/install/debian/)
-
-
-[def]: /assets/hello_world.png
