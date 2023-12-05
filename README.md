@@ -303,6 +303,18 @@ The purpose of unattended-upgrades is to keep the computer current with the late
 5. The output that you should get.
 ![Hello World](/assets/hello_world.png)
 
+6. Running docker as a non root user (add a user to the docker group). After running the command, you will have to log off and on for the groups new membership to be applied
+
+   ``` bash
+   sudo usermod -a -G docker $USER
+   ```
+
+   At this point you should be able to run docker commands withough the sudo pre-requisite.
+
+   ``` bash
+   docker run hello-world
+   ```
+
 ## References
 
 - Akamai - [Automating Security Updated](https://www.linode.com/docs/guides/how-to-configure-automated-security-updates-debian/)
@@ -310,3 +322,4 @@ The purpose of unattended-upgrades is to keep the computer current with the late
 - Digital Ocean - How To Setup a Firewall with UFW on an [Ubuntu and Debian](https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server) Cloud Server
 - How to install UFW on [Debian 12](https://www.cyberciti.biz/faq/set-up-a-firewall-with-ufw-on-debian-12-linux/)
 - How to install docker on [Debian 12](https://docs.docker.com/engine/install/debian/)
+- Running the docker daemon as a [non root](https://docs.docker.com/engine/security/rootless/) user
